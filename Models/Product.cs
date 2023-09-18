@@ -12,7 +12,9 @@ namespace FormsApp.Models
         public decimal Price { get; set; }
         //[Display(Name="Image")]
         public string Image { get; set; } = string.Empty;
+        [Display(Name="Is it active?")]
         public bool IsActive { get; set; }
+        [Display(Name="Category")]
         public int CategoryId { get; set; }
     }
 }
