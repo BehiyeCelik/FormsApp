@@ -6,15 +6,22 @@ namespace FormsApp.Models
     {
         [Display(Name="Product Id")]
         public int ProductId { get; set; }
+        [Required]
         //[Display(Name="Product name")]
-        public string Name { get; set; } = string.Empty; //Name adlı özellik başlangıçta boş bir string ile başlar
+        [Required(ErrorMessage = "Name is Required")]
+        [StringLength(100)]
+        public string? Name { get; set; } = string.Empty; //Name adlı özellik başlangıçta boş bir string ile başlar
+        [Required]
+        [Range(0, 100000)]
         //[Display(Name="Price")]
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
         //[Display(Name="Image")]
-        public string Image { get; set; } = string.Empty;
+        [Required]
+        public string? Image { get; set; } = string.Empty;
         [Display(Name="Is it active?")]
         public bool IsActive { get; set; }
+        [Required]
         [Display(Name="Category")]
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
     }
 }
