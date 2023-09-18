@@ -6,7 +6,6 @@ namespace FormsApp.Models
     {
         [Display(Name="Product Id")]
         public int ProductId { get; set; }
-        [Required]
         //[Display(Name="Product name")]
         [Required(ErrorMessage = "Name is Required")]
         [StringLength(100)]
